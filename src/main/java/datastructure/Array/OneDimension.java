@@ -1,11 +1,11 @@
 package datastructure.Array;
 
-public class OneDeminsion<E> {
+public class OneDimension<E> {
     private int capacity;
     private int length;
     private E[] data;
 
-    public OneDeminsion(int initLength) {
+    public OneDimension(int initLength) {
         this.capacity = -1;
         this.length = initLength;
         this.data = (E[]) new Object[initLength];
@@ -38,5 +38,13 @@ public class OneDeminsion<E> {
         for (int i = 0; i < data.length; i++) {
             tempArray[i] = data[i];
         }
+    }
+
+    public void printCurrentArrayInstance() {
+        System.out.print("[");
+        for (int i = 0; i < data.length; i++) {
+            System.out.print(data[i] + ",\t");
+        }
+        System.out.print("[");
     }
 }
