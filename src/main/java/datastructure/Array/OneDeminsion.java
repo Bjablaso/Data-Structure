@@ -23,8 +23,8 @@ public class OneDeminsion<E> {
         this.length = length * 2;
         E[] temp = (E[]) new Object[length];
 
-        System.arraycopy(data, 0, temp, 0,length);
-      
+        System.arraycopy(data, 0, temp, 0,length); // O(n) time complexity and Space complexity.
+
        data = (E[]) new Object[length];
        data = temp;
 
@@ -32,7 +32,7 @@ public class OneDeminsion<E> {
 
     /**
      * Copy all element from old array into new array
-     * @param tempArray
+     * @param tempArray take in the new array and copy its element
      */
     public void copyElements(E[] tempArray) {
         for (int i = 0; i < data.length; i++) {
